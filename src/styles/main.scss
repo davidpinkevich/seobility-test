@@ -1,0 +1,10 @@
+@import './normalize.scss';
+@import './fonts.scss';
+@import './form.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
