@@ -4,7 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Seo</title>
+    <link rel="icon" href="./assets/icon.svg" type="image/icon" />
+    <title>Form-Seo</title>
   </head>
-  <body></body>
+  <body>
+    <header class="seo__header">
+      <div class="seo__header-title">FormSeo</div>
+    </header>
+    <main class="seo__body">
+      <form class="seo__form form">
+        <h1 class="form__title">Напишите нам</h1>
+        <label class="form__name"
+          ><p class="form__name-title">Имя:</p>
+          <input type="text" placeholder="Не менее 3 символов" />
+          <p class="form__name-prompt"></p
+        ></label>
+        <label class="form__email"
+          ><p class="form__name-title">Почта:</p>
+          <input type="text" />
+          <p class="form__email-prompt"></p
+        ></label>
+        <label class="form__phone"
+          ><p class="form__name-title">Номер:</p>
+          <input name="phone" id="phone" class="phone" placeholder="+375(__)___-__-__" type="tel" />
+          <p class="form__phone-prompt"></p
+        ></label>
+        <label class="form__text"
+          ><p class="form__name-title">Сообщение:</p>
+          <textarea placeholder="Введите сообщение для нас"></textarea>
+          <p class="form__text-prompt"></p>
+        </label>
+        <button class="form__button" type="submit">Отправить</button>
+      </form>
+      <button class="seo__body-btn">Размещение рекламы</button>
+    </main>
+    <div class="modal hidden">
+      <div class="modal__text">
+        <p>Здесь будет место для вашей рекламы</p>
+        <button class="modal__close"><img src="./assets/cross.svg" /></button>
+      </div>
+    </div>
+  </body>
 </html>
