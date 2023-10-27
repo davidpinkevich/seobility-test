@@ -43,6 +43,11 @@
     z-index: 1;
     transition: all 0.5s;
     animation: pulseModal 3s infinite;
+    @media (max-width: 700px) {
+      width: 300px;
+      padding: 30px;
+      font-size: 24px;
+    }
   }
   &__close {
     position: absolute;
@@ -53,6 +58,10 @@
     border-radius: 8px;
     background-color: rgb(192, 152, 152);
     transition: all 0.3s;
+    @media (max-width: 700px) {
+      width: 30px;
+      height: 30px;
+    }
     &:hover {
       background-color: black;
     }
