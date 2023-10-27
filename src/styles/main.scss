@@ -1,10 +1,73 @@
 @import './normalize.scss';
 @import './fonts.scss';
 @import './form.scss';
+@import './buttons.scss';
+@import './errors.scss';
+@import './modal.scss';
 
 body {
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  animation: viewBody 2s;
+  background-color: rgb(227, 215, 201);
+}
+
+.seo__header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  background-color: rgb(149, 140, 130);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  animation: viewHeader 3s;
+  &-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    animation: pulseTitle 5s infinite;
+    color: white;
+    text-shadow: 0px 2px 2px black;
+  }
+}
+
+@keyframes viewBody {
+  0% {
+    top: -110%;
+  }
+  50% {
+    top: -50%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes pulseTitle {
+  0% {
+    transform: scale(1);
+    color: rgb(208, 201, 194);
+    text-shadow: 0px 0px 0px black;
+  }
+  50% {
+    transform: scale(1.1);
+    color: white;
+    text-shadow: 0px 3px 3px black;
+  }
+  100% {
+    transform: scale(1);
+    color: rgb(208, 201, 194);
+    text-shadow: 0px 0px 0px black;
+  }
+}
+
+@keyframes viewHeader {
+  0% {
+    top: -110%;
+  }
+  100% {
+    top: 0;
+  }
 }
