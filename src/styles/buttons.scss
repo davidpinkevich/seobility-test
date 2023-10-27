@@ -1,4 +1,5 @@
-.form__button {
+.form__button,
+.seo__body-btn {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -8,6 +9,7 @@
   text-transform: uppercase;
   padding: 10px;
   font-size: 22px;
+  font-family: 'Oswald', sans-serif;
   margin-top: 10px;
   border-radius: 8px;
   background-color: rgb(143, 134, 134);
@@ -17,5 +19,50 @@
     box-shadow: 0px 0px 5px 5px white;
     background-color: black;
     width: 105%;
+  }
+  &:disabled {
+    pointer-events: none;
+    background-color: rgb(200, 180, 180);
+    color: rgb(199, 174, 174);
+    box-shadow: 0px 0px 2px 2px rgb(92, 89, 89);
+  }
+}
+
+.form__button {
+  margin-top: 20px;
+}
+
+.seo__body-btn {
+  width: 200px;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  animation: pulseBtn 3s infinite, viewText 2s;
+  &:hover {
+    width: 220px;
+  }
+}
+
+@keyframes pulseBtn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes viewText {
+  0% {
+    right: -110%;
+  }
+  50% {
+    right: -30%;
+  }
+  100% {
+    right: 10%;
   }
 }
