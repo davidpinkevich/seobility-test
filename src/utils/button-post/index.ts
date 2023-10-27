@@ -25,10 +25,11 @@ function handlerPost(item: HTMLButtonElement | null) {
         phone: dataValid.phone.value,
         text: dataValid.text.value,
       });
+      console.log(data);
       if (data.status === 'success') {
         const result = document.createElement('div');
         result.classList.add('seo__body-result-true');
-        result.innerHTML = 'Регистрация прошла успешно';
+        result.innerHTML = data.message;
         main?.append(result);
         setTimeout(() => {
           result.remove();
@@ -58,7 +59,7 @@ function handlerPost(item: HTMLButtonElement | null) {
       } else {
         const result = document.createElement('div');
         result.classList.add('seo__body-result-false');
-        result.innerHTML = 'Ошибка на стороне сервера, повторите попытку';
+        result.innerHTML = data.message;
         main?.append(result);
         setTimeout(() => {
           result.remove();
