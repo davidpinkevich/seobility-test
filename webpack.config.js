@@ -11,7 +11,7 @@ const devtool = devMode ? 'source-map' : undefined;
 module.exports = {
   mode,
   devtool,
-  entry: path.resolve(__dirname, 'src/ts/index.ts'),
+  entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
