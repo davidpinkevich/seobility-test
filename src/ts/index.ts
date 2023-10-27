@@ -1,4 +1,4 @@
 import '../styles/main.scss';
-import App from './app';
+import App from '../components/app';
 
 App();
